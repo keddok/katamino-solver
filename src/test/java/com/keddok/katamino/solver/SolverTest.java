@@ -20,6 +20,8 @@ public class SolverTest {
         Figure palka = new Blue();
         Stack<Figure> solution = Solver.solveRecursive(field, new LinkedList<>(List.of(palka, palka, palka, palka, palka)));
         System.out.print(solution);
+
+        assert solution != null && solution.size() == 5; /// todo check that solution fills all field
     }
 
     @org.junit.Test
@@ -28,6 +30,8 @@ public class SolverTest {
         Figure palka = new BlueVertical();
         Stack<Figure> solution = Solver.solveRecursive(field, new LinkedList<>(List.of(palka, palka, palka, palka, palka)));
         System.out.print(solution);
+
+        assert solution != null && solution.size() == 5; /// todo check that solution fills all field
     }
 
     @org.junit.Test
@@ -36,6 +40,8 @@ public class SolverTest {
         Figure palka = new BlueHorizontal();
         Stack<Figure> solution = Solver.solveRecursive(field, new LinkedList<>(List.of(palka, palka, palka, palka, palka)));
         System.out.print(solution);
+
+        assert solution != null && solution.size() == 5; /// todo check that solution fills all field
     }
 
     @org.junit.Test
@@ -47,6 +53,8 @@ public class SolverTest {
                 new LinkedList<>(List.of(palkaVertical, palkaVertical, palkaVertical, palkaVertical, palkaVertical,
                         palkaHorizontal, palkaHorizontal, palkaHorizontal, palkaHorizontal, palkaHorizontal)));
         System.out.print(solution);
+
+        assert solution != null && solution.size() == 10; /// todo check that solution fills all field
     }
 
     @org.junit.Test
@@ -55,6 +63,8 @@ public class SolverTest {
         Stack<Figure> solution = Solver.solveRecursive(field,
                 new LinkedList<>(List.of(new Grey(), new Yellow(), new Pink())));
         System.out.print(solution);
+
+        assert solution != null && solution.size() == 3; /// todo check that solution fills all field
     }
 
     @org.junit.Test
@@ -64,6 +74,8 @@ public class SolverTest {
                 new LinkedList<>(List.of(new Grey(), new Yellow(), new Pink(),
                         new Purple(), new Green(), new Brown())));
         System.out.print(solution);
+
+        assert solution != null && solution.size() == 6; /// todo check that solution fills all field
     }
 
     @org.junit.Test
@@ -75,5 +87,7 @@ public class SolverTest {
                         new Orange(), new BlueHorizontal(), new LightBlue(),
                         new Red(), new LightGreen(), new Aquamarine())));
         System.out.print(solution);
+
+        assert solution != null && solution.size() == 12; /// todo check that solution fills all field
     }
 }
